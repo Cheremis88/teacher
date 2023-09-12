@@ -6,7 +6,7 @@
 
 body {
   min-inline-size: 320px;
-  max-inline-size: 1100px;
+  max-inline-size: 1200px;
   margin: 0 auto;
   background-color: #030e21;
   font-family: IBM Plex mono;
@@ -87,4 +87,36 @@ p {
   font-size: 3vw;
   text-align: end;
   color: #e64818;
+}
+
+.landscape {
+  display: none;
+}
+
+@media (orientation: landscape) {
+  .main__image,
+  .main__title,
+  .main__text,
+  h2,
+  p {
+    display: none;
+  }
+
+  .main {
+    display: grid;
+    place-content: center;
+  }
+
+  .landscape {
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px #e64818;
+    text-align: center;
+  }
+
+  .orange {
+    text-shadow: none;
+    color: #e64818;
+  }
 }
